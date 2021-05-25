@@ -1,0 +1,9 @@
+apiVersion: cluster.open-cluster-management.io/v1
+kind: ManagedCluster
+metadata:
+  name: sno00596
+  labels:
+    name: sno00596
+    observability: disabled
+spec:
+  hubAcceptsClient: true

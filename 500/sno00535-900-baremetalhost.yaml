@@ -1,0 +1,19 @@
+apiVersion: metal3.io/v1alpha1
+kind: BareMetalHost
+metadata:
+  name: sno00535
+  namespace: sno00535
+  annotations:
+    inspect.metal3.io: disabled
+    bmac.agent-install.openshift.io/hostname: "sno00535"
+  labels:
+    infraenvs.agent-install.openshift.io: "sno00535"
+spec:
+  bootMode: "UEFI"
+  bmc:
+    address: 'redfish-virtualmedia+http://198.18.8.58:9000/redfish/v1/Systems/dbb3d13c-e102-49a0-8b9c-b198fa6838d4'
+    disableCertificateVerification: true
+    credentialsName: sno00535-bmc-secret
+  bootMACAddress: '52:54:00:76:28:05'
+  automatedCleaningMode: disabled
+  online: true
